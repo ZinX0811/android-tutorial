@@ -4,9 +4,10 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "students")
 data class Student(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,  // Mặc định là 0 cho auto-generate
-    @ColumnInfo(name = "mssv") val mssv: String,       // Thông tin MSSV
-    @ColumnInfo(name = "ten") val ten: String          // Tên sinh viên
+    @PrimaryKey(autoGenerate = true)
+    val _id: Int = 0,
+    val studentName: String,
+    val studentId:String
 )
